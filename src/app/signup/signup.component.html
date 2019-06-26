@@ -1,0 +1,67 @@
+<ion-header  no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="tertiary" size="large" (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+          <ion-col align-self-start>
+            <br>
+            <br>
+            <br>
+          </ion-col>
+          <ion-col align-self-center>
+              <ion-img class="myphoto" style="width: 150px; height: 150px;" src="../../assets/iserv2.jpg"></ion-img>
+          </ion-col>
+          <ion-col align-self-end>
+            <br>
+            <br>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-card-content>
+      <ion-card-title text-center>
+        Registrar
+        </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <form #form="ngForm"  novalidate>
+      <ion-item>        
+          <ion-label><ion-icon name="person" slot="start"></ion-icon></ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Nombre Completo" required></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label><ion-icon name="person" slot="start"></ion-icon></ion-label>
+          <ion-input type="text" [(ngModel)]="apellidos" name="apellidos" placeholder="Apellidos" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="call" slot="start"></ion-icon></ion-label>
+        <ion-input type="number" [(ngModel)]="telefono" name="telefono" placeholder="Numero De Celular" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="calendar" slot="start"></ion-icon></ion-label>
+      <ion-datetime ype="text" placeholder="Fecha De Nacimiento" [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento" max="2001-05-31" display-format="DD-MM-YYYY" picker-format="DD-MM-YYYY"></ion-datetime>
+    </ion-item>
+      <ion-item>
+        <ion-label><ion-icon name="contact" slot="start"></ion-icon></ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Nombre De Usuario" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="contact" slot="start"></ion-icon></ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Correo Electronico" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><ion-icon name="key" slot="start"></ion-icon></ion-label>
+      <ion-input type="password" [(ngModel)]="contrasena" name="contrasena" placeholder="Contraseña" required></ion-input>
+    </ion-item>
+      <ion-button type="submit" (click)="logSignUp()" [disabled]="!form.valid" expand="full" size="large" color="tertiary">Finalizar Registro</ion-button>
+    </form>
+  </ion-list>
+</ion-content>

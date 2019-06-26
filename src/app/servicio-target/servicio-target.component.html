@@ -1,0 +1,40 @@
+<div>
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/ss.png">
+      </ion-avatar>
+      <h2>{{item.nombre}} {{item.apellidos}}</h2>
+      
+    </ion-item>
+  
+    <img [src]="providers.img">
+  
+    <ion-card-content>
+      <p>{{item.descripcion}}</p>
+    </ion-card-content>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button ion-button icon-start clear small color="tertiary">
+          <ion-icon slot="icon-only" name="thumbs-up"></ion-icon>
+          <div>12 Likes</div>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button ion-button icon-start clear small color="tertiary">
+          <ion-icon slot="icon-only" name="text"></ion-icon>
+          <div>4 Comments</div>
+        </ion-button>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <ion-button ion-button icon-start clear small (click)="verProvider(i)" color="tertiary">
+            <ion-icon slot="icon-only" name="eye"></ion-icon>
+            <div>Ver Más</div>
+          </ion-button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+</div>

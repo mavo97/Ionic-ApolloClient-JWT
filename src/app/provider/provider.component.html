@@ -1,0 +1,54 @@
+<ion-header color="tertiary" no-border>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="large" (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button color="dark" size="large" (click)="profile()">
+          <ion-icon slot="icon-only" name="contact"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-start>
+          <br>
+          <br>
+          <br>
+        </ion-col>
+        <ion-col align-self-center>
+            <ion-img class="myphoto" style="width: 200px; height: 200px;" src="assets/d.jpg"></ion-img>
+        </ion-col>
+        <ion-col align-self-end>
+          <br>
+          <br>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card-content>
+      <ion-card-title text-center>
+        {{providers3.nombre}}
+      </ion-card-title>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, veniam! Pariatur fuga facilis odit nobis, voluptatem sequi commodi. Alias ullam perspiciatis reprehenderit tenetur facere molestiae eum at dolor consequatur? Earum!
+      </p>
+    </ion-card-content>
+    <ion-segment>
+      <ion-segment-button href="#dogs" color="tertiary" value="dogs">
+          <ion-icon name="call" color="tertiary"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button href="#cats" color="tertiary" value="cats">
+          <ion-icon name="chatboxes" color="tertiary"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button href="#tiger" value="tiger" color="tertiary">
+          <ion-icon name="heart" color="tertiary"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-card>
+
+</ion-content>

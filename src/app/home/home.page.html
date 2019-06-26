@@ -1,14 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header  no-border>
+  
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding text-center>
+  <ion-list>
+    <ion-title style="text-align: center;">INSTASERV</ion-title>
+    <ion-grid>
+        <ion-row>
+            <ion-col align-self-start>
+              <br>
+              <br>
+              <br>
+            </ion-col>
+            <ion-col align-self-center>
+                <ion-img class="myphoto" style="width: 120px; height: 120px;" src="https://pngimage.net/wp-content/uploads/2018/06/servicio-png-5.png"></ion-img>
+            </ion-col>
+            <ion-col align-self-end>
+              <br>
+              <br>
+            </ion-col>
+          </ion-row>
+    </ion-grid>
+    <ion-text><h2>Iniciar Sesión</h2></ion-text>
+    <form #form="ngForm"  novalidate>
+      <ion-item>        
+          <ion-label><ion-icon name="contact" slot="start"></ion-icon></ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Email" required></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label><ion-icon name="key" slot="start"></ion-icon></ion-label>
+          <ion-input type="password" [(ngModel)]="contrasena" name="contrasena" placeholder="Contraseña" required></ion-input>
+      </ion-item>
+      <ion-button type="submit" (click)="logForm()" [disabled]="!form.valid" expand="full" size="large" color="danger">Iniciar Sesión</ion-button>
+    </form>
+    <ion-button expand="full" (click)="signUp()" size="medium" color="warning">Registrar</ion-button>
+  </ion-list>
 </ion-content>

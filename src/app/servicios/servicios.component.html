@@ -1,0 +1,12 @@
+<div>
+  <ion-list>
+    <ion-item >
+        <ion-card >
+          <img  color="dark" [src]="servicio.img"/>
+          <div class="card-title" >{{servicio.nombre}}</div>
+          <div class="card-subtitle"><ion-button (click)="verServicio(i)" color="dark" size="small"><ion-icon name="eye"></ion-icon></ion-button></div>
+          <!--<div class="card-subtitle">{{item.}}</div>-->
+        </ion-card>
+      </ion-item>
+  </ion-list>
+</div>

@@ -1,0 +1,19 @@
+<ion-header color="tertiary" no-border>
+  <ion-toolbar color="tertiary">
+      <ion-label text-center>{{providers.nombre}}</ion-label><br>
+      <ion-label  text-center>Escoje un provedor</ion-label>
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="large" (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button color="dark" size="large" (click)="profile()">
+          <ion-icon slot="icon-only" name="contact"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-servicio-target (providerSeleccionado)="verProvider($event)" [item]='item' [index]='i' *ngFor="let item of providers2; let i = index"></app-servicio-target>
+</ion-content>

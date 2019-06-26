@@ -1,0 +1,29 @@
+<ion-header color="tertiary" no-border>
+  <ion-toolbar color="tertiary">
+      <ion-label  text-center>Servicios</ion-label>
+    <ion-buttons slot="start">
+      <ion-button color="dark" size="large" (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button color="dark" size="large" (click)="profile()">
+          <ion-icon slot="icon-only" name="contact"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page" >
+ 
+  <app-servicios (servicioSeleccionado)="verServicio($event)" [servicio]='servicio' [index]='i' *ngFor="let servicio of categorias; let i = index"></app-servicios>
+  
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)" > 
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Buscando más informacion...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
